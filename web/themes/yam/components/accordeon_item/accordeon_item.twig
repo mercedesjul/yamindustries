@@ -1,0 +1,32 @@
+{% set classes = [
+  'accordeon-item',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="accordeon-item__header">
+    <h3 class="accordeon-item__headline">{{ headline }}</h3>
+    {% if subline %}
+      <div class="accordeon-item__subline">
+        {{ subline|raw }}
+        {% if extra_subline %}
+        <span>|</span>{{ extra_subline|striptags }}
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="accordeon__trigger">🗙</div>
+  </div>
+  <div class="accordeon-item__content">
+    <div class="accordeon-item__body">{{ body|raw }}</div>
+    {% if link.url %}
+      <div class="accordeon-item__button">
+        {% include 'yam:knob' with {
+          attributes: create_attribute(),
+          is_button: true,
+          arrow: true,
+          text: link.text,
+          url: link.url,
+        } %}
+      </div>
+    {% endif %}
+  </div>
+</div>

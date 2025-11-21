@@ -1,0 +1,17 @@
+name: yam
+type: theme
+base theme: stable9
+description: 'Responsive Theme yam'
+core_version_requirement: '>=9.2'
+
+regions:
+  header_left: 'Header Left'
+  header_menu: 'Header Menu'
+  content: 'Content'
+  footer_outer_left: 'Footer outer left'
+  footer_inner_left: 'Footer inner left'
+  footer_inner_right: 'Footer inner right'
+  footer_outer_right: 'Footer outer right'
+
+libraries:
+  - yam/global

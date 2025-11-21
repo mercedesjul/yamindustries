@@ -1,0 +1,28 @@
+.brand-teaser {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 1em;
+  background: var(--secondary-1);
+  border-radius: .5rem;
+  & .brand-teaser__image{
+    overflow: hidden;
+    border-radius: .5rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+  .brand-teaser__content {
+    padding: .25em;
+    background-color: var(--secondary-2);
+    border-radius: .5rem;
+  }
+
+
+}

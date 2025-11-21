@@ -1,0 +1,27 @@
+yam.all:
+  label: All
+  mediaQuery: 'all'
+  multipliers:
+   - 1x
+   - 2x
+
+yam.narrow:
+  label: Narrow
+  mediaQuery: '(max-width: 650px)'
+  multipliers:
+   - 1x
+   - 2x
+
+yam.medium:
+  label: Medium
+  mediaQuery: '(min-width: 651px) and (max-width: 1024px)'
+  multipliers:
+   - 1x
+   - 2x
+
+yam.wide:
+  label: Wide
+  mediaQuery: '(min-width: 1025px)'
+  multipliers:
+   - 1x
+   - 2x

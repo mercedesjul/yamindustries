@@ -1,0 +1,15 @@
+{% set field_content %}
+  {% for item in items %}
+    {% if item.clean %}
+      {{ item.content }}
+    {% else %}
+      <{{ item.wrapper_element }}{{ item.attributes }}>{{ item.content }}</{{ item.wrapper_element }}>
+    {% endif %}
+  {% endfor %}
+{% endset %}
+
+{% if clean %}
+  {{ field_content }}
+{% else %}
+  <{{ wrapper_element }}{{ attributes }}>{{ field_content }}</{{ wrapper_element }}>
+{% endif %}

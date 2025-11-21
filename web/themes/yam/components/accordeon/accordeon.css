@@ -1,0 +1,10 @@
+.accordeon:not(.accordeon--raw) {
+  margin: var(--xl-gap) auto;
+  max-width: var(--xs-width);
+  padding: 0 var(--xs-gap);
+}
+
+.accordeon__headline {
+  text-align: center;
+  margin-bottom: 3.75rem;
+}

@@ -1,0 +1,255 @@
+:root {
+  /* basic colors for text color and background colors. You can flip these to get a dark theme. */
+  --pen: var(--accent);
+  --paper: var(--primary);
+
+  --primary: #F9F7F5;
+  --secondary-1: #c48a4e;
+  --secondary-2: rgb(209, 163, 116);
+  --accent: #3A3B3C;
+
+  /* branding colors and their opposites */
+  --ocean: #3a4a57;
+  --ocean-dark: #29343D;
+  --ocean-medium: #94a8b8;
+  --ocean-light: #cfd9e2;
+  --ocean-light-rgb: 0, 119, 204;
+  --ocean-very-light: #eff2f5;
+  --ocean-very-light-rgb: rgb(239, 242, 245);
+  --cp-brown-1: #B3581A;
+  --cp-brown-2: #7E4B3A;
+  --cp-yellow: #E8B65D;
+  --cp-light-green: #F5F2D0;
+  --cp-grey: #6D6D6D;
+  --cp-light-brown: #D2B48C;
+  --aloe: #d2dace;
+  --aloe-dark: #55664d;
+  --aloe-medium: #a7b89d;
+  --aloe-very-light: #f1f5ef;
+  --sand: #ede9e1;
+  --stone: #e2e1de;
+  --cloud: #faf8f5;
+  --black: #000;
+  --white: #fff;
+
+  /* Signal colors: that communicate a situation */
+  --danger: crimson;
+  --warning: darkred;
+  --disabled: silver;
+  --success: lightgreen;
+  --info: lightblue;
+
+  /* Layout */
+  --xl-width: 67rem; /* 1072px */
+  --xs-width: 44rem; /* 704px */
+  --xl-gap: 5rem;
+  --xs-gap: 1.25rem; /* 20px */
+
+  /* Typo */
+  --lora: 'Lora', yam, sans-serif;
+  --open_sans: 'Monsterrat', yam, serif;
+  --monster: 'Mosterrat', yam, serif;
+
+  --huge: 400 2.667rem/3.056rem 'Monsterrat', yam, sans-serif; /* 48px, 55px */
+  --trenta: 400 2.25rem/2.875rem 'Monsterrat', yam, sans-serif; /* 36px, 46px */
+  --venti: 400 2rem/2.875rem 'Monsterrat', yam, sans-serif; /* 32px, 46px */
+  --grande: 600 1.25rem/2rem 'Monsterrat', yam, sans-serif; /* 20px, 32px */
+  --tall: 400 1.125rem/1.875rem 'Monsterrat', yam, sans-serif; /* 18px, 30px */
+  --petit: 400 1rem/1.375rem 'Monsterrat', yam, sans-serif; /* 16px, 22px */
+  --demi: 400 .9375rem/1.875rem 'Mosterrat', yam, sans-serif; /* 15px, 30px */
+  --mini: 400 .875rem/1.25rem 'Monsterat', yam, sans-serif; /* 14px, 20px */
+
+  @media (max-width: 500px) {
+    --trenta: 400 1.625rem/2.25rem 'Monsterrat', yam, sans-serif; /* 26px, 36px */
+    --venti: 400 1.5rem/2rem 'Monsterrat', yam, sans-serif; /* 24px, 32px */
+    --grande: 600 1.25rem/2rem 'Monsterrat', yam, sans-serif; /* 20px, 32px */
+    --tall: 400 1.125rem/1.875rem 'Monsterrat', yam, sans-serif; /* 18px, 30px */
+    --petit: 400 1rem/1.375rem 'Monsterrat', yam, sans-serif; /* 16px, 22px */
+    --demi: 400 .9375rem/1.875rem 'Monsterrat', yam, sans-serif; /* 15px, 30px */
+    --mini: 400 .875rem/1.25rem 'Monsterrat', yam, sans-serif; /* 14px, 20px */
+  }
+
+  /* helper */
+  --border-r: .625rem;
+
+  /* Arrows */
+  --short-arrow: path('M1.45718 5.02454C1.04297 5.02454 0.707184 5.36032 0.707184 5.77454C0.707184 6.18875 1.04297 6.52454 1.45718 6.52454L1.45718 5.02454ZM18.6882 6.30487C18.9811 6.01197 18.9811 5.5371 18.6882 5.24421L13.9152 0.471235C13.6223 0.178342 13.1475 0.178342 12.8546 0.471235C12.5617 0.764128 12.5617 1.239 12.8546 1.5319L17.0972 5.77454L12.8546 10.0172C12.5617 10.3101 12.5617 10.7849 12.8546 11.0778C13.1475 11.3707 13.6223 11.3707 13.9152 11.0778L18.6882 6.30487ZM1.45718 5.77454L1.45718 6.52454L18.1579 6.52454V5.77454V5.02454L1.45718 5.02454L1.45718 5.77454Z');
+  --long-arrow: path('M1.13806 4.91724C0.723848 4.91724 0.388062 5.25302 0.388062 5.66724C0.388062 6.08145 0.723848 6.41724 1.13806 6.41724L1.13806 4.91724ZM24.9097 6.19757C25.2026 5.90467 25.2026 5.4298 24.9097 5.13691L20.1367 0.363935C19.8438 0.0710423 19.369 0.0710423 19.0761 0.363935C18.7832 0.656829 18.7832 1.1317 19.0761 1.4246L23.3187 5.66724L19.0761 9.90988C18.7832 10.2028 18.7832 10.6776 19.0761 10.9705C19.369 11.2634 19.8438 11.2634 20.1367 10.9705L24.9097 6.19757ZM1.13806 5.66724L1.13806 6.41724L24.3794 6.41724V5.66724V4.91724L1.13806 4.91724L1.13806 5.66724Z');
+  --long-arrow--vertical: path('M7.12205 0.904295C7.12205 0.490083 6.78627 0.154297 6.37205 0.154297C5.95784 0.154297 5.62205 0.490083 5.62205 0.904295H7.12205ZM5.84172 24.6759C6.13462 24.9688 6.60949 24.9688 6.90238 24.6759L11.6754 19.9029C11.9682 19.61 11.9682 19.1352 11.6754 18.8423C11.3825 18.5494 10.9076 18.5494 10.6147 18.8423L6.37205 23.0849L2.12941 18.8423C1.83649 18.5494 1.36168 18.5494 1.06878 18.8423C0.775885 19.1352 0.775885 19.61 1.06878 19.9029L5.84172 24.6759ZM6.37205 0.904295H5.62205L5.62205 24.1456H6.37205H7.12205L7.12205 0.904295H6.37205Z');
+}
+
+:root {
+  color: var(--pen);
+  font: var(--open_sans);
+  text-underline-offset: 0.25em;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--head-size);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  scroll-behavior: smooth;
+  font: var(--tall);
+  background-color: var(--primary);
+}
+
+h1 {
+  font: var(--trenta);
+}
+
+h2 {
+  font: var(--venti);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  position: relative;
+  color: var(--pen);
+  text-decoration: none;
+}
+
+.hover_underline {
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+/* See comp: slabs.twig/tile: icon-teaser for a good example */
+@media (min-width: 1025px) {
+  .animate-link,
+  .animate-links a:not(.knob):not(.shop-icon),
+  .animate-links .animate-link
+  .is-active {
+    display: inline-block;
+    width: fit-content;
+    padding-bottom: 2px;
+    background-image: linear-gradient(currentColor 0 0);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition:
+      background-size 0.3s,
+      background-position 0s 0.3s;
+  }
+
+  .animate-link:hover,
+  .animate-links a:not(.knob):not(.shop-icon):hover,
+  .animate-links a:not(.knob):not(.shop-icon).is-active,
+  .animate-links:hover .animate-link {
+    background-size: 100% 2px;
+    background-position: 100% 100%;
+  }
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.sheet__content input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.sheet__content input[type="radio"] + label {
+  display: flex;
+  position: relative;
+  padding-left: .75rem;
+}
+
+.sheet__content input[type="radio"] + label:before,
+.sheet__content input[type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  top: 48%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px solid var(--ocean);
+  cursor: pointer;
+}
+
+.sheet__content input[type="radio"] + label:before {
+  width: 1rem;
+  height: 1rem;
+  left: -1.125rem;
+}
+
+.sheet__content input[type="radio"] + label:after {
+  left: -.985rem;
+  width: 0.7rem;
+  height: .7rem;
+  background-color: var(--ocean);
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+.sheet__content input[type="radio"]:hover + label:after {
+  opacity: .75;
+}
+
+.sheet__content input[type="radio"]:checked + label:after {
+  opacity: 1;
+}
+
+.sheet__content input[type="password"],
+.sheet__content input[type="number"],
+.sheet__content input[type="email"],
+.sheet__content input[type="date"],
+.sheet__content input[type="text"],
+.sheet__content input[type="time"],
+.sheet__content input[type="tel"],
+.sheet__content select {
+  font-weight: 600;
+  padding: .75rem 1rem;
+  box-sizing: border-box;
+  border-radius: .5rem;
+  border: 1px solid var(--pen);
+}
+
+.sheet__content input[type="date"] {
+  padding: .6875rem 1rem;
+}
+
+.sheet__content input[type="time"] {
+  padding: .625rem 1rem;
+}
+
+.sheet__content select {
+  padding: .625rem 1rem;
+}

@@ -1,0 +1,26 @@
+{% set classes = [
+  'accordeon',
+  raw ? 'accordeon--raw',
+  'animate-links',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if headline %}
+    <h2 class="accordeon__headline">{{ headline }}</h2>
+  {% endif %}
+  <div class="accordeon__items">
+    {% if rows %}
+      {{ rows }}
+    {% else %}
+      {% for item in items %}
+        {% include 'yam:accordeon_item' with {
+          attributes: create_attribute(),
+          headline: item.headline,
+          subline: item.subline,
+          body: item.body,
+          link: item.link,
+         } %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>

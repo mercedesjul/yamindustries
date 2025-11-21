@@ -1,0 +1,13 @@
+{% if primary_tabs %}
+  {% include 'yam:meta' with {
+    items: primary_tabs,
+    centered: true
+  } %}
+{% endif %}
+
+{% if secondary_tabs %}
+  {% include 'yam:meta' with {
+    items: secondary_tabs,
+    centered: true
+  } %}
+{% endif %}

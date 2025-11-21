@@ -1,0 +1,53 @@
+.knob {
+  cursor: pointer;
+  font: var(--demi) 1.2em;
+  outline: none;
+  border: solid 1px var(--accent);
+  transition: background-color .25s;
+}
+
+.knob[disabled] {
+  opacity: .75;
+  pointer-events: none;
+}
+
+.knob--button {
+  background-color: var(--secondary-2);
+  color: var(--accent);
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+}
+
+a:hover .knob--button,
+.knob--button:hover {
+}
+
+.knob--arrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 2.8125rem .5rem 1rem;
+}
+
+.knob--arrow:after {
+  bottom: unset;
+  left: unset;
+  content: '';
+  display: block;
+  position: absolute;
+  right: 1rem;
+  height: .75rem;
+  width: 1.5rem;
+  background-color: currentColor;
+  transition: .25s;
+  clip-path: var(--short-arrow);
+}
+
+a:hover .knob--arrow:after,
+.knob--arrow:hover:after {
+  width: 1.725rem;
+  clip-path: var(--long-arrow);
+  right: .75rem;
+}
+

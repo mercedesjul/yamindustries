@@ -1,0 +1,18 @@
+{{ attach_library('yam/meta') }}
+
+{% set classes = [
+  'meta',
+  header ? 'meta--header',
+  vertical ? 'meta--vertical',
+  centered ? 'meta--centered',
+  'animate-links',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <ul class="meta__list">
+    {% for item in items %}
+      <li class="meta__item">
+        <a class="meta__link" href="{{ item.url }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+</div>

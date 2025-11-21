@@ -1,0 +1,20 @@
+{% set classes = [
+  'knob',
+  arrow ? 'knob--arrow',
+  scheme ? 'knob--' ~ scheme,
+  hover ? 'hover_underline',
+  is_button ? 'knob--button' : is_submit ? 'knob--button knob--submit' : 'knob--link',
+] %}
+
+{% set tag = url ? 'a' : is_submit ? 'input' : is_fake ? 'span' : 'button' %}
+
+<{{ tag }}
+  {{ attributes.addClass(classes) }}
+  {% if url %} href="{{ url }}" {% endif  %}
+  {% if target %} target="_blank" {% endif %}
+  {% if type %} type="{{ type }}" {% endif %}
+  {% if value %} value="{{ value }}"{% endif %}
+  {% if name %} name="{{ name }}"{% endif %}
+>
+  {{ text }}
+</{{ tag }}>

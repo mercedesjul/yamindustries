@@ -1,0 +1,11 @@
+name: 'Zero EntityWrapper'
+type: module
+description: 'Base EntityWrapper module'
+core_version_requirement: ">=8"
+package: zero
+version: 0.32.0
+
+configure: zero_entitywrapper.config.form
+
+dependencies:
+  - zero_preprocess

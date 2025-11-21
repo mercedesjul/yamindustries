@@ -1,0 +1,146 @@
+.facts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 33.75rem;
+  color: #fff;
+
+  @media (max-width: 1024px) {
+    height: 60vh;
+  }
+}
+
+.facts__image-wrapper {
+  position: absolute;
+  height: 33.75rem;
+  width: 100vw;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    position: relative;
+    height: 100%;
+  }
+}
+
+.facts__image-wrapper img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.facts__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1024px) {
+    position: relative
+  }
+}
+
+.facts__image:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-1)
+}
+
+.facts__content-wrapper {
+  margin: 0 auto;
+  max-width: 90rem;
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+.facts__content {
+  position: relative;
+  text-align: center;
+}
+
+.facts__headline {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 3.125rem;
+  letter-spacing: 0;
+
+  @media (max-width: 1024px) {
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+  }
+}
+
+.facts__subline {
+  font-size: 1.375rem;
+  line-height: 2.375rem;
+}
+
+.facts__subline p {
+  margin: 0;
+}
+
+.facts__facts-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3.75rem;
+  width: 100%;
+  padding: 0 var(--xs-gap);
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.facts__facts:focus {
+  outline: none;
+}
+
+.facts__fact-item {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 1.25rem;
+  }
+}
+
+.facts__fact-item:focus {
+  outline: none;
+
+  @media (max-width: 1024px) {
+    margin: .625rem 0
+  }
+
+  @media (min-width: 650px) and (max-width: 1024px) {
+    width: 50%;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 1.125rem;
+    width: 100%;
+  }
+}
+
+.facts__fact-text {
+  display: block;
+  width: 100%;
+}

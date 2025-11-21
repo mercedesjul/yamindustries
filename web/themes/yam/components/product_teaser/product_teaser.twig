@@ -1,0 +1,29 @@
+{% set classes = [
+   'product-teaser'
+]%}
+<div {{ (attributes|default(create_attribute())).addClass(classes) }}>
+  <div class="product-teaser--image">{{ image }}</div>
+  <div class="product-teaser--data">
+    <div class="product-teaser--tags">
+      {% for tag in tags %}
+        <div class="product-teaser--tag">{{ tag }}</div>
+      {% endfor %}
+    </div>
+    <h3 class="product-teaser--title">{{ title }}</h3>
+    <div class="product-teaser--description">
+      {{ description }}
+    </div>
+    <div class="product-teaser--table">
+      {% for row in table %}
+        <div class="product-teaser--row">
+          <div class="product-teaser--datapoint">
+            {{ row[0] }}
+          </div>
+          <div class="product-teaser--value">
+            {{ row[1] }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.throbber__dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--pen);
+}
+
+.throbber__dot--one {
+  animation: jumpingAnimation 0.8s 0.1s ease-in-out infinite;
+}
+
+.throbber__dot--two {
+  animation: jumpingAnimation 0.8s 0.2s ease-in-out infinite;
+}
+
+.throbber__dot--three {
+  animation: jumpingAnimation 0.8s 0.3s ease-in-out infinite;
+}
+
+@keyframes jumpingAnimation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

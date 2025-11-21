@@ -1,0 +1,31 @@
+{% set classes = [
+  'domino',
+  reversed ? 'domino--reversed',
+  'animate-links',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="domino__wrapper">
+    <div class="domino__media">{{ media }}</div>
+    <div class="domino__content">
+      {% if title %}
+        <h2 class="domino__title">{{ title }}</h2>
+      {% endif %}
+      <div class="domino__body">{{ body }}</div>
+      {% if link %}
+        <a class="domino__link" href="{{ link.url }}">{{ link.text }}</a>
+      {% endif %}
+      {% if button %}
+        <div class="domino__button">
+          {% include 'yam:knob' with {
+            attributes: create_attribute(),
+            is_button: true,
+            arrow: true,
+            text: button.text,
+            url: button.url,
+          } %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

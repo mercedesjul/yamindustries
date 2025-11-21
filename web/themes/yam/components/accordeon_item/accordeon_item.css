@@ -1,0 +1,139 @@
+.accordeon-item {
+  border-top: 1px solid var(--secondary-2);
+}
+
+.accordeon-item__header {
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    padding-right: 30px;
+  }
+}
+
+.accordeon__trigger {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform, right, .25s;
+}
+
+.accordeon-item--open .accordeon__trigger {
+  right: 2px;
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.accordeon-item__headline {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.accordeon-item__subline {
+  display: flex;
+  gap: .25rem;
+  font-size: 1rem;
+}
+
+.accordeon-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: none;
+}
+
+.accordeon-item--open .accordeon-item__content {
+  padding-bottom: 5.25rem;
+  transition: max-height .25s;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 2.875rem;
+  }
+}
+
+.accordeon-item__body {
+  overflow: auto;
+
+  @media (min-width: 651px) {
+    line-height: 1.75rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 1rem;
+    line-height: 1.45rem;
+  }
+}
+
+.accordeon-item__button {
+  margin-top: 2rem;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+@media (max-width: 650px) {
+  .accordeon-item__button > a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+/* Table styling */
+/* Table styling */
+.accordeon-item__body table {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  border-spacing: 0;
+  border-top-left-radius: .625rem;
+  border-top-right-radius: .625rem;
+  border-collapse: collapse;
+}
+
+.accordeon-item__body thead {
+  font-weight: 600;
+  background-color: var(--secondary-1);
+}
+
+.accordeon-item__body th {
+  text-align: left;
+  border: none;
+  padding: 1rem .5rem 1rem 0;
+}
+
+.accordeon-item__body th:first-child {
+  padding-left: .75rem;
+  border: .0625rem solid transparent;
+  border-top-left-radius: .625rem;
+}
+
+.accordeon-item__body th:last-child {
+  border: .0625rem solid transparent;
+  border-top-right-radius: .625rem;
+}
+
+.accordeon-item__body sup {
+  font-weight: 400;
+}
+
+.accordeon-item__body tbody tr {
+  position: relative;
+  border-bottom: .0625rem solid var(--secondary-2);
+}
+
+.accordeon-item__body td {
+  padding: 1.6rem 0;
+  line-height: 1.7;
+  border: none;
+}
+
+.accordeon-item__body td:first-child {
+  padding: 1.6rem .5rem 1.6rem .75rem;
+}

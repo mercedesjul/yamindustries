@@ -1,0 +1,22 @@
+{% set classes = [
+  'cta',
+  reversed ? 'cta--reversed' : 'cta--default',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="cta__wrap">
+    <div class="cta__media">{{ image }}</div>
+    <div class="cta__content">
+      <h2 class="cta__headline">{{ headline }}</h2>
+      <div class="cta__body">{{ body }}</div>
+      <div class="cta__link">
+        {% include 'yam:knob' with {
+          attributes: create_attribute(),
+          arrow: true,
+          text: link.text,
+          url: link.url
+        } %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+{% set classes = [
+  'mood',
+  full ? 'mood--full',
+  search ? 'mood--search',
+  login ? 'mood--login',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="mood__content">
+    <h1 class="mood__title">{{ title }}</h1>
+    {% if body %}
+      <div class="mood__body">{{ body|raw }}</div>
+    {% endif %}
+    {% if button %}
+      <div class="mood__button">
+        {% include 'yam:knob' with {
+          attributes: create_attribute(),
+          is_button: true,
+          text: button.text,
+          url: button.url,
+        } %}
+      </div>
+    {% endif %}
+  </div>
+  {% if tags %}
+    <div class="mood__tags">
+      {% for tag in tags %}
+        <span class="mood__tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if media %}
+    <div class="mood__media">
+      {{ media }}
+    </div>
+  {% endif %}
+</div>

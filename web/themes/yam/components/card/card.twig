@@ -1,0 +1,20 @@
+{% set classes = [
+  'card',
+] %}
+
+<a {{ attributes.addClass(classes) }} href="{{ link.url }}">
+  <div class="card__media">{{ media }}</div>
+  <h3 class="card__headline">{{ headline }}</h3>
+  {% if subline %}
+    <div class="card__subline">{{ subline }}</div>
+  {% endif %}
+  <div class="card__link">
+    {% include 'yam:knob' with {
+      attributes: create_attribute(),
+      is_button: true,
+      arrow: true,
+      text: link.text,
+      url: null,
+    } %}
+  </div>
+</a>

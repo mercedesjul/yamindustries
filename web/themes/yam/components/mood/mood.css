@@ -1,0 +1,109 @@
+.mood {
+  display: grid;
+  gap: var(--xs-gap);
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5rem auto;
+  max-width: var(--xl-width);
+  padding: 0 var(--xs-gap);
+
+  @media (max-width: 800px) {
+    gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.mood--search {
+  margin-bottom: 7.5rem;
+} 
+
+.mood--full {
+  gap: 3.75rem;
+  grid-template-columns: 1fr;
+}
+
+.mood__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.mood__title {
+  margin: 0 auto;
+  max-width: 44rem;
+}
+
+.mood__body {
+  margin: 1.875rem auto 2rem;
+  text-align: left;
+}
+
+.mood--search .mood__body {
+  margin: 3.75rem 0 0;
+  max-width: none;
+  
+  @media (min-width: 576px) {
+    margin: 3.75rem auto 0;
+    max-width: 32.5rem;
+  }
+}
+
+.mood__body p {
+  margin: 0;
+}
+
+.mood__title + .mood__button {
+  margin-top: 3.75rem;
+}
+
+.mood__media img {
+  width: 100%;
+  border-radius: var(--border-r);
+}
+
+/* Login page styling */
+.mood--login .form-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.mood--login .form-item input {
+  width: 100%;
+}
+
+.mood--login .form-item + .form-item,
+.mood--login .form-actions {
+  margin-top: 1rem;
+}
+
+/* Password reset page styling */
+.mood--login .mood__content {
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+.mood--login .password-reset {
+  display: flex;
+  flex-direction: column;
+}
+
+.mood--login .password-reset p {
+  font-size: .875rem;
+  line-height: 1.5;
+  margin-top: .5rem;
+}
+
+.mood__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.mood__tag {
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}

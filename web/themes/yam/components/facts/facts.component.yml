@@ -1,0 +1,9 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: facts
+status: stable
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+    - yam/count-up
+    - yam/tiny-slider

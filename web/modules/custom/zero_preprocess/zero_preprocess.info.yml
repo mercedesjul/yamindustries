@@ -1,0 +1,6 @@
+name: 'Zero Preprocess'
+type: module
+description: 'Add preprocess file loading functionality'
+core_version_requirement: ">=8"
+package: zero
+version: 0.11.0

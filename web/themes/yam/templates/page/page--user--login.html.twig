@@ -1,0 +1,21 @@
+{% set content %}
+  {% include 'yam:mood' with {
+    login: true,
+    full: true,
+    title: 'Login',
+    body: page.content,
+  } %}
+{% endset %}
+
+{% include 'yam:sheet' with {
+  attributes: create_attribute(),
+  sheet_header_top: page.header_top,
+  sheet_header_left: page.header_left,
+  sheet_header_menu: page.header_menu,
+  sheet_header_icons: page.header_icons,
+  sheet_header_button: page.header_button,
+  content: content,
+  sheet_footer_top: page.footer_top,
+  sheet_footer_middle: page.footer_middle,
+  sheet_footer_bottom: page.footer_bottom,
+} %}

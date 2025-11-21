@@ -1,0 +1,147 @@
+.menu {
+  li, ul {
+    list-style: none;
+    padding: 0;
+  }
+  --scroll-width: 60vh;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  & .menu--desktop {
+    display: none;
+    & ul {
+      display: flex;
+      gap: 1rem;
+      & li {
+        position: relative;
+        a:hover {
+          text-shadow: var(--secondary-1) .3rem .3rem 3px;
+        }
+        ul {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          transform: translateY(10px) translateX(-50%);
+          justify-content: start;
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          overflow: hidden;
+          visibility: hidden;
+          min-width: 12rem;
+          opacity: 0;
+          transition: all .3s ease-in-out;
+          background-color: var(--secondary-2);
+          border: 1px solid var(--accent);
+          border-radius: .5rem;
+          & li{
+            padding: .25rem;
+            &:hover {
+              border-radius: .5rem;
+            }
+          }
+        }
+        &:hover ul {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0) translateX(-50%);
+        }
+      }
+    }
+    @media (min-width: 651px) {
+      display: block;
+    }
+  }
+  & .menu--mobile {
+    & .menu--mobile--trigger {
+      display: flex;
+      transition: all 0.3s ease-in-out;
+      transform: rotateZ(90deg);
+      top: calc(15px + var(--drupal-displace-offset-top));
+      right: 5vh;
+      &.is-active {
+        transform: rotateZ(-90deg);
+        & .menu--mobile--trigger-button svg {
+          stroke: var(--primary);
+        }
+      }
+      padding: 1rem;
+      height: 32px;
+      width: 32px;
+      justify-content: center;
+      align-items: end;
+      & .menu--mobile--trigger-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        & svg {
+          transition: stroke .3s ease-in-out;
+          stroke: var(--accent);
+        }
+      }
+    }
+    & .menu--mobile--content {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: var(--drupal-displace-offset-top) + 90px;
+      top: 0;
+      z-index: -1;
+      right: -100vw;
+      width: 100vw;
+      background-color: var(--secondary-2);
+      height: 100vh;
+      transition: right 0.3s ease-in-out;
+      &.is-active {
+        right: 0vw;
+        & ul li {
+          opacity: 1;
+          transform: unset;
+        }
+      }
+      ul {
+        & li {
+          opacity: 0;
+          & ul {
+            margin-top: 1rem;
+            li {
+              font: var(--tall);
+            }
+          }
+          transform: translateX(50vw);
+          transition: all .3s ease-in-out;
+          &:nth-child(1) {transition-delay: 0.1s}
+          &:nth-child(2) {transition-delay: 0.2s}
+          &:nth-child(3) {transition-delay: 0.3s}
+          &:nth-child(4) {transition-delay: 0.4s}
+          &:nth-child(5) {transition-delay: 0.5s}
+          &:nth-child(6) {transition-delay: 0.6s}
+          &:nth-child(7) {transition-delay: 0.7s}
+          &:nth-child(8) {transition-delay: 0.8s}
+          &:nth-child(9) {transition-delay: 0.9s}
+          &:nth-child(10) {transition-delay: 1.0s}
+        }
+
+      }
+
+      & ul {
+        counter-reset: li-counter;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font: var(--huge);
+
+      }
+
+
+    }
+    @media (min-width: 651px) {
+      display: none;
+    }
+  }
+}

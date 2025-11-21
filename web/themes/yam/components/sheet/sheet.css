@@ -1,0 +1,44 @@
+/* Header */
+.sheet {
+  .sheet__content, .sheet__footer {
+    transition: transform .3s ease-in-out;
+  }
+  &.transform {
+    .sheet__content, .sheet__footer {
+      transform: translateX(-100vw);
+    }
+  }
+}
+.sheet__header {
+  position: sticky;
+  top: var(--drupal-displace-offset-top, 0px);
+  z-index: 10;
+  background-color: var(--secondary-2);
+  display: flex;
+  padding: 1rem var(--xs-gap);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 650px) {
+    padding: 1rem var(--xl-gap);
+  }
+  & .sheet__header-left {
+    & img {
+      max-height: 80px;
+    }
+
+  }
+  & .sheet__header-right {
+  }
+}
+.sheet__footer {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--secondary-2);
+}

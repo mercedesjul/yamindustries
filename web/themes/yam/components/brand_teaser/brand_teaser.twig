@@ -1,0 +1,10 @@
+{% set classes = [
+   'brand-teaser'
+]%}
+<a href="{{ url }}"{{ (attributes|default(create_attribute())).addClass(classes) }}>
+  <div class="brand-teaser__image">{{ image }}</div>
+  <div class="brand-teaser__content">
+    <h3 class="brand-teaser__title">{{ title }}</h3>
+    <div class="brand-teaser__description">{{ description }}</div>
+  </div>
+</a>

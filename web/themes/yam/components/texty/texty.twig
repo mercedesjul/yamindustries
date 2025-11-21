@@ -1,0 +1,10 @@
+{% set classes = [
+  'texty',
+  centered ? 'texty--centered',
+  'animate-links',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <h2 class="texty__title">{{ title }}</h2>
+  <div class="texty__body">{{ body }}</div>
+</div>

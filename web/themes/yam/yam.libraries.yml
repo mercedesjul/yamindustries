@@ -1,0 +1,22 @@
+layout:
+  css:
+    layout:
+      base/layout.css: {}
+
+global:
+  css:
+    base:
+      base/normalize.css: {}
+      base/base.css: {}
+      base/lora/lora.css: {}
+      base/monsterrat/monsterrat.css: {}
+      base/open_sans/open_sans.css: {}
+  js:
+    base/ThemeHelper.js: {}
+  dependencies:
+    - core/drupal
+    - core/normalize
+
+##########
+# Libraries
+##########

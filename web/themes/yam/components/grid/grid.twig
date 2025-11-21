@@ -1,0 +1,9 @@
+{% set classes = [
+  'grid',
+  grid_size ? 'grid--' ~ grid_size,
+] %}
+<div {{ attributes.addClass(classes) }}>
+{% for row in rows %}
+  {{ row.content }}
+{% endfor %}
+</div>

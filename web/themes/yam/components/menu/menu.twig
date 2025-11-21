@@ -1,0 +1,39 @@
+{% import _self as menus %}
+<div class="menu">
+  <div class="menu--desktop">
+    {{ menus.menu_links(items, attributes, 0) }}
+  </div>
+
+  <div class="menu--mobile">
+    <div class="menu--mobile--trigger">
+      <div class="menu--mobile--trigger-button">
+        <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6H20M7 12H17M9 18H15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <div class="menu--mobile--content">
+      {{ menus.menu_links(items, attributes, 0) }}
+    </div>
+  </div>
+</div>
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+<ul{{ attributes }}>
+  {% else %}
+  <ul>
+    {% endif %}
+    {% for item in items %}
+      <li {{ item.attributes }}>
+        {{ link(item.title, item.url) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,32 @@
+.socials {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 2rem 0 0;
+}
+
+.socials p {
+  margin: 0;
+
+  @media (min-width: 1025px) {
+    display: grid;
+    gap: 1.5rem .5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    gap: .5rem;
+  }
+
+  @media (max-width: 650px) {
+    justify-content: center;
+  }
+}
+
+.socials a {
+  transition: color .25s;
+}
+
+.socials a:hover {
+  color: var(--ocean-medium);
+}

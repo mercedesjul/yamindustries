@@ -1,0 +1,27 @@
+{% set classes = [
+  'facts',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  <div class="facts__image-wrapper">
+    <div class="facts__image">
+      {{ image }}
+    </div>
+  </div>
+  <div class="facts__content-wrapper">
+    <div class="facts__content">
+      <h2 class="facts__headline">{{ headline }}</h2>
+      {% if subline %}
+        <div class="facts__subline">{{ subline }}</div>
+      {% endif %}
+      <div class="facts__facts-wrapper">
+        {% for fact in items %}
+          <div class="facts__fact-item">
+            <span class="facts__fact-text">{{ fact.title }}</span>
+            <strong class="facts__fact-number"{% if fact.suffix %} data-count-suffix="{{ fact.suffix }}"{% endif %}>{{ fact.value }}</strong>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

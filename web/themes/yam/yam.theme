@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @param array $suggestions
+ * @param array $vars
+ */
+
+/**
+ * Implements template_preprocess_page().
+ */
+function yam_preprocess_page(&$vars) {
+
+}
+

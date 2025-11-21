@@ -1,0 +1,227 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Template\Attribute;
+use Drupal\zero_entitywrapper\Base\ContentWrapperInterface;
+use Drupal\zero_entitywrapper\Base\ViewWrapperInterface;
+use Drupal\zero_entitywrapper\Content\ContentWrapper;
+use Drupal\zero_entitywrapper\View\ViewWrapper;
+
+function zero_entitywrapper_page_attachments(array &$attachments) {
+  /** @var \Drupal\zero_entitywrapper\Service\StaticWrapperService $cache */
+  $cache = Drupal::service('zero.entitywrapper.static');
+
+  $cache->applyAttachments($attachments);
+}
+
+function zero_entitywrapper_preprocess_page(&$variables) {
+  /** @var \Drupal\zero_entitywrapper\Service\StaticWrapperService $cache */
+  $cache = Drupal::service('zero.entitywrapper.static');
+
+  $cache->applyCache($variables, TRUE);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function zero_entitywrapper_theme($existing, $type, $theme, $path) {
+  return [
+    'zero_component' => [
+      'variables' => [
+        'component_vars' => [],
+        'component_path' => NULL,
+      ],
+      'pattern' => 'zero_component__',
+    ],
+    'zero_media' => [
+      'variables' => [
+        'media' => NULL,
+        'type' => NULL,
+        'options' => FALSE,
+        'attributes' => [],
+        'alt' => NULL,
+        'title' => NULL,
+      ],
+      'pattern' => 'zero_media__',
+    ],
+    'entitywrapper_field' => [
+      'render element' => 'element',
+    ],
+    'view_wrapper_sort' => [
+      'variables' => [
+        'type' => 'select',
+        'view' => NULL,
+        'options' => [],
+      ],
+      'pattern' => 'view_wrapper_sort__',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function zero_entitywrapper_theme_suggestions_zero_media(array $vars) {
+  if (!$vars['media'] instanceof ContentWrapperInterface) {
+    $vars['media'] = ContentWrapper::create($vars['media']);
+  }
+
+  /** @var ContentWrapperInterface $media */
+  $media = $vars['media'];
+  $type = $vars['type'] ?? $media->bundle();
+
+  return [
+    'zero_media',
+    'zero_media__' . $type,
+    'zero_media__' . $media->id(),
+    'zero_media__' . $type . '__' . $media->id(),
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function zero_entitywrapper_theme_suggestions_view_wrapper_sort(array $vars) {
+  if (!$vars['view'] instanceof ViewWrapperInterface) {
+    $vars['view'] = ViewWrapper::create($vars['view']);
+  }
+
+  /** @var ViewWrapperInterface $view */
+  $view = $vars['view'];
+
+  return [
+    'view_wrapper_sort__' . $vars['type'],
+    'view_wrapper_sort__' . $vars['type'] . '__' . $view->id(),
+    'view_wrapper_sort__' . $vars['type'] . '__' . $view->id() . '__' . $view->getDisplay(),
+  ];
+}
+
+function template_preprocess_zero_media(&$vars) {
+  if (!$vars['media'] instanceof ContentWrapperInterface) {
+    $vars['media'] = ContentWrapper::create($vars['media']);
+  }
+
+  /** @var ContentWrapperInterface $media */
+  $media = $vars['media'];
+  $type = $vars['type'] ?? $media->bundle();
+
+  $options = [];
+  if (is_array($vars['options']) && isset($vars['options'][$type])) {
+    $options = array_merge($options, $vars['options'][$type]);
+  }
+
+  if (isset($options['embed']) && $options['embed']) {
+    $vars['uri'] = $media->getEntity($media->metaMediaSourceField())->entity()->getFileUri();
+    $vars['formatted'] = Markup::create(file_get_contents($vars['uri']));
+  } else if (isset($options['video']) && $options['video']) {
+    $vars['video'] = TRUE;
+
+    $id = NULL;
+    preg_match_all('/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/m', $media->getUrl()->toString(), $id, PREG_SET_ORDER, 0);
+
+    if (!empty($id[0][1])) {
+      $vars['provider'] = 'youtube';
+      $vars['url'] = 'https://www.youtube.com/embed/' . $id[0][1];
+      $vars['attributes'] = new Attribute(array_merge([
+        'data-src' => $vars['url'] . '?autoplay=1',
+        'allowfullscreen' => TRUE,
+        'allowtransparency' => TRUE,
+        'allow' => 'autoplay',
+        'frameBorder' => 0,
+      ], $options['attributes'] ?? $vars['attributes']));
+    }
+
+    if (empty($vars['provider'])) {
+      $vars['provider'] = 'local';
+      $vars['mime'] = $media->getEntity($media->metaMediaSourceField())->entity()->getMimeType();
+      $vars['url'] = $media->getUrl()->toString();
+      $vars['attributes'] = new Attribute(array_merge([
+        'playsinline' => TRUE,
+        'controls' => TRUE,
+      ], $options['attributes'] ?? $vars['attributes']));
+    }
+
+  } else {
+    $vars['uri'] = $media->getEntity($media->metaMediaSourceField())->entity()->getFileUri();
+
+    if (isset($options['responsive'])) {
+      $vars['formatted'] = [
+        '#theme' => 'responsive_image',
+        '#uri' => $vars['uri'],
+        '#responsive_image_style_id' => $options['responsive'],
+      ];
+    } else if (isset($options['style'])) {
+      $vars['formatted'] = [
+        '#theme' => 'image_style',
+        '#uri' => $vars['uri'],
+        '#style_name' => $options['style'],
+      ];
+    } else {
+      $vars['formatted'] = [
+        '#theme' => 'image',
+        '#uri' => $vars['uri'],
+      ];
+    }
+
+    $raw = $media->getRaw($media->metaMediaSourceField());
+    $vars['formatted']['#alt'] = $vars['#alt'] ?? $raw['alt'] ?? 'media';
+    $title = $vars['#title'] ?? $raw['title'] ?? FALSE;
+    if ($title) {
+      $vars['formatted']['#title'] = $title;
+    }
+    $vars['formatted']['#attributes'] = array_merge($vars['attributes'], $options['attributes'] ?? []);
+    $vars['formatted'] = array_merge($vars['formatted'], $options['element'] ?? []);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function template_preprocess_entitywrapper_field(&$vars) {
+  foreach (Element::children($vars['element']) as $delta) {
+    $vars['items'][$delta]['content'] = $vars['element'][$delta];
+    /** @var \Drupal\Core\Template\Attribute $attribute */
+    $attribute = $vars['element'][$delta]['attributes'] ?? new Attribute();
+    $vars['items'][$delta]['attributes'] = $attribute;
+
+    $attributes = [];
+    if (isset($vars['element']['#entitywrapper_info']['items']['_all']['wrapper'])) {
+      $attributes = array_merge_recursive($attributes, $vars['element']['#entitywrapper_info']['items']['_all']['wrapper']);
+    }
+    if (isset($vars['element']['#entitywrapper_info']['items'][$delta]['wrapper'])) {
+      unset($attributes['none']);
+      $attributes = array_merge_recursive($attributes, $vars['element']['#entitywrapper_info']['items'][$delta]['wrapper']);
+    }
+
+    if (empty($attributes['none']) && count($attributes)) {
+      $vars['items'][$delta]['wrapper_element'] = $attributes['element'] ?? 'div';
+      unset($attributes['element']);
+      if (!empty($attributes['class'])) {
+        foreach ($attributes['class'] as $index => $class) {
+          $attributes['class'][$index] = Html::getClass($class);
+        }
+      }
+      foreach ($attributes as $attr => $value) {
+        $attribute->setAttribute($attr, $value);
+      }
+    } else {
+      $vars['items'][$delta]['clean'] = TRUE;
+    }
+  }
+
+  if (isset($vars['element']['#entitywrapper_info']['wrapper'])) {
+    $wrapper = $vars['element']['#entitywrapper_info']['wrapper'];
+    if (empty($wrapper['none'])) {
+      $vars['wrapper_element'] = $wrapper['element'] ?? 'div';
+      unset($wrapper['element']);
+      $vars['attributes'] = array_merge_recursive($vars['attributes'], $wrapper);
+    } else {
+      $vars['clean'] = TRUE;
+    }
+  } else {
+    $vars['clean'] = TRUE;
+  }
+}
+$vars['attributes'] = new Attribute($vars['attributes'] ?? []);

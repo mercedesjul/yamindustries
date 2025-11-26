@@ -22,7 +22,7 @@
     overflow: hidden;
     width: 100%;
     transition: grid-template-columns .3s ease-in-out;
-    grid-template-columns: 0fr;
+    grid-template-columns: 0;
     &.is-active {
       grid-template-columns: 1fr;
       & .filter-form--inner > * {

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for yam_theme module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function yam_theme_theme($existing, $type, $theme, $path) {
+  return [
+    'socials' => [
+      'variables'=> [
+        'facebook' => NULL,
+        'x' => NULL,
+        'linkedin' => NULL,
+        'instagram' => NULL,
+      ]
+    ],
+  ];
+}
+

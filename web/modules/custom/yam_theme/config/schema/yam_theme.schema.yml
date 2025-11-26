@@ -1,0 +1,7 @@
+block.settings.yam_theme_social_block:
+  type: block_settings
+  label: 'Social Block block'
+  mapping:
+    example:
+      type: string
+      label: Example

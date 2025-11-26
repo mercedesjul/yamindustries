@@ -15,8 +15,15 @@
         this.toggleMenu(content, trigger);
       });
       content.addEventListener('click', () => {
-        this.toggleMenu(content, trigger, false);
       });
+      content.querySelectorAll('ul li').forEach(li => {
+        if (!li.querySelector('ul')) return;
+        li.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          li.children[1].classList.toggle('is-active');
+        })
+      });
+
     },
     toggleMenu(content, trigger, force) {
       content.classList.toggle('is-active', force);

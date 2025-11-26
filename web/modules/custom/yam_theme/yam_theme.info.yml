@@ -1,0 +1,5 @@
+name: 'yam_theme'
+type: module
+description: 'Yam Theme functionalities'
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,22 @@
+uuid: 2e209668-c63a-4be3-b9f5-a66b817605f1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yam
+_core:
+  default_config_hash: CQUnnwQyYPH54BUT_vrsXOdaJ9LZEwSElvGd2Xcyp44
+id: yam_local_tasks
+theme: yam
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

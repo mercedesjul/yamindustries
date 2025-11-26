@@ -1,0 +1,10 @@
+uuid: a93bc68f-0e83-4d94-b7ec-6fe6f38a2462
+langcode: en
+status: true
+dependencies: {  }
+id: domino_teaser
+label: 'Domino Teaser'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

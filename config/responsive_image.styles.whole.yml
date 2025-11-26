@@ -1,0 +1,24 @@
+uuid: 8323e947-b421-43bf-897b-5a49ad275a18
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.1070x485
+    - image.style.2140x970
+  theme:
+    - yam
+id: whole
+label: Whole
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: 1070x485
+    breakpoint_id: yam.all
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: 2140x970
+    breakpoint_id: yam.all
+    multiplier: 2x
+breakpoint_group: yam
+fallback_image_style: 2140x970

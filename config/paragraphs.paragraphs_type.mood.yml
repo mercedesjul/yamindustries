@@ -1,0 +1,10 @@
+uuid: 80f310c4-e215-4394-bebe-a00168d042f7
+langcode: en
+status: true
+dependencies: {  }
+id: mood
+label: Mood
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

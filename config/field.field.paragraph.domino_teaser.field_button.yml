@@ -1,0 +1,23 @@
+uuid: 5cab3e82-b521-42b2-8e84-8101043aa220
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button
+    - paragraphs.paragraphs_type.domino_teaser
+  module:
+    - link
+id: paragraph.domino_teaser.field_button
+field_name: field_button
+entity_type: paragraph
+bundle: domino_teaser
+label: Button
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

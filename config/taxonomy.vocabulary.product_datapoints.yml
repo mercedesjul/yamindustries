@@ -1,0 +1,9 @@
+uuid: 0a6e889c-aa09-48d2-ab4e-26a761d6e2fd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Product Datapoints'
+vid: product_datapoints
+description: null
+weight: 0
+new_revision: false

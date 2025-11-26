@@ -1,0 +1,40 @@
+uuid: 35238ef7-8eb4-434d-b75c-6ddc7af2440c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.brand.field_description
+    - field.field.node.brand.field_mood
+    - field.field.node.brand.field_paragraphs
+    - node.type.brand
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.brand.teaser
+targetEntityType: node
+bundle: brand
+mode: teaser
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_mood:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_categories: true
+  field_paragraphs: true
+  langcode: true
+  links: true

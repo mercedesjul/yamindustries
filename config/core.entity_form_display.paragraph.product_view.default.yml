@@ -1,0 +1,35 @@
+uuid: 11cf0377-bdfc-473f-a899-e649cdaf7252
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_view.field_brand
+    - field.field.paragraph.product_view.field_title
+    - paragraphs.paragraphs_type.product_view
+id: paragraph.product_view.default
+targetEntityType: paragraph
+bundle: product_view
+mode: default
+content:
+  field_brand:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

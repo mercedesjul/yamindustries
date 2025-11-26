@@ -1,0 +1,64 @@
+uuid: ef6e6239-9717-4532-a53b-f1f2f26a4372
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.page
+    - paragraphs.paragraphs_type.accordion_item
+    - paragraphs.paragraphs_type.datapoint
+    - paragraphs.paragraphs_type.fact_item
+    - paragraphs.paragraphs_type.mood
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: page
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      mood: mood
+      fact_item: fact_item
+      accordion_item: accordion_item
+      datapoint: datapoint
+    negate: 1
+    target_bundles_drag_drop:
+      accordion:
+        weight: 11
+        enabled: false
+      accordion_item:
+        weight: 12
+        enabled: true
+      cta:
+        weight: 8
+        enabled: false
+      datapoint:
+        weight: 14
+        enabled: true
+      domino_teaser:
+        weight: 9
+        enabled: false
+      fact_item:
+        weight: 10
+        enabled: true
+      facts:
+        weight: 11
+        enabled: false
+      mood:
+        weight: 2
+        enabled: true
+      product_view:
+        weight: 19
+        enabled: false
+      text_tile:
+        weight: 7
+        enabled: false
+field_type: entity_reference_revisions

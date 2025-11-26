@@ -1,0 +1,22 @@
+uuid: 8419984a-e72f-4582-a482-8b49269b34c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.brand
+  module:
+    - text
+id: node.brand.field_description
+field_name: field_description
+entity_type: node
+bundle: brand
+label: Description
+description: 'Text for teaser views'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

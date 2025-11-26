@@ -1,0 +1,18 @@
+uuid: 2439f6c8-62e9-430e-9fc8-b0c3d4b956b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.datapoint
+id: paragraph.datapoint.created
+field_name: created
+entity_type: paragraph
+bundle: datapoint
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,15 @@
+uuid: 6d61252d-f352-4947-9c3d-4c45cdd11dec
+langcode: de
+status: true
+dependencies: {  }
+name: 571x602
+label: 571x602
+effects:
+  895f1298-d9c5-4813-8f55-50eb744bde98:
+    uuid: 895f1298-d9c5-4813-8f55-50eb744bde98
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 571
+      height: 602
+      anchor: center-center

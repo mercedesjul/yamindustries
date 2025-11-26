@@ -1,0 +1,22 @@
+uuid: 189e4cf7-8e67-434a-97a6-c409ab32727e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.domino_teaser
+  module:
+    - text
+id: paragraph.domino_teaser.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: domino_teaser
+label: body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

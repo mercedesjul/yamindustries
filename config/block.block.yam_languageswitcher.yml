@@ -1,0 +1,20 @@
+uuid: 1e9de2a6-d2ff-4ff8-a8d6-9e17babb07fb
+langcode: en
+status: false
+dependencies:
+  module:
+    - language
+  theme:
+    - yam
+id: yam_languageswitcher
+theme: yam
+region: header_menu
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

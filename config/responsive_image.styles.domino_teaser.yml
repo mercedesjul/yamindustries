@@ -1,0 +1,13 @@
+uuid: bb3c8883-2c1d-4ba9-aad1-4b640d06e08b
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.862x586
+  theme:
+    - yam
+id: domino_teaser
+label: 'Domino teaser'
+image_style_mappings: {  }
+breakpoint_group: yam
+fallback_image_style: 862x586

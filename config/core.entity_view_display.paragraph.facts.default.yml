@@ -1,0 +1,52 @@
+uuid: f8f27ef5-7345-46a7-9ee8-05ac34efd51d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.facts.field_body
+    - field.field.paragraph.facts.field_facts
+    - field.field.paragraph.facts.field_image
+    - field.field.paragraph.facts.field_title
+    - paragraphs.paragraphs_type.facts
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.facts.default
+targetEntityType: paragraph
+bundle: facts
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_facts:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

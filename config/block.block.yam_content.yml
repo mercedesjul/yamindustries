@@ -1,0 +1,22 @@
+uuid: 62ab4c75-dbc8-4717-b9c0-13c9b087d68a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yam
+_core:
+  default_config_hash: wSIwu4xS3IdP6gGSAAjB_eTevmKqmyVD9DWYgBzLPao
+id: yam_content
+theme: yam
+region: content
+weight: 1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

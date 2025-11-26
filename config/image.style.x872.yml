@@ -1,0 +1,15 @@
+uuid: a47636ec-85a6-46f6-b836-1f64c8f6cb0c
+langcode: de
+status: true
+dependencies: {  }
+name: x872
+label: x872
+effects:
+  d1814726-58f3-4813-9162-f2aa82bee726:
+    uuid: d1814726-58f3-4813-9162-f2aa82bee726
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 872
+      upscale: true

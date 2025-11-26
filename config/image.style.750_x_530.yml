@@ -1,0 +1,15 @@
+uuid: 8413ebe7-5406-453d-be63-f67871990926
+langcode: de
+status: true
+dependencies: {  }
+name: 750_x_530
+label: 750x530
+effects:
+  1f68af4d-5039-444a-9f99-48251b0f76e5:
+    uuid: 1f68af4d-5039-444a-9f99-48251b0f76e5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 530
+      anchor: center-center

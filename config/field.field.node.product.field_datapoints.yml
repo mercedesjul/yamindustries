@@ -1,0 +1,58 @@
+uuid: a8390c36-cf79-484a-950d-c34779bc7c4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_datapoints
+    - node.type.product
+    - paragraphs.paragraphs_type.datapoint
+  module:
+    - entity_reference_revisions
+id: node.product.field_datapoints
+field_name: field_datapoints
+entity_type: node
+bundle: product
+label: datapoints
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      datapoint: datapoint
+    negate: 0
+    target_bundles_drag_drop:
+      accodrion:
+        weight: 12
+        enabled: false
+      accodrion_item:
+        weight: 13
+        enabled: false
+      cta:
+        weight: 14
+        enabled: false
+      datapoint:
+        weight: 11
+        enabled: true
+      domino_teaser:
+        weight: 15
+        enabled: false
+      fact_item:
+        weight: 16
+        enabled: false
+      facts:
+        weight: 17
+        enabled: false
+      mood:
+        weight: 18
+        enabled: false
+      product_view:
+        weight: 19
+        enabled: false
+      text_tile:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

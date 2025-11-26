@@ -1,0 +1,21 @@
+uuid: 11cf0377-bdfc-473f-a899-e649cdaf7253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brand_view.field_grid_size
+    - paragraphs.paragraphs_type.brand_view
+id: paragraph.brand_view.default
+targetEntityType: paragraph
+bundle: brand_view
+mode: default
+content:
+  field_grid_size:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

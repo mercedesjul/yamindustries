@@ -1,0 +1,15 @@
+uuid: 8e74ccb1-5f99-4c6d-a23e-671493ecdb13
+langcode: de
+status: true
+dependencies: {  }
+name: full
+label: x1920
+effects:
+  4e251352-6716-427b-93c8-28c66876eb47:
+    uuid: 4e251352-6716-427b-93c8-28c66876eb47
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: null
+      upscale: true

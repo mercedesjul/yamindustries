@@ -1,0 +1,21 @@
+uuid: 66242b07-b1de-4baf-8595-ce63c898a77c
+langcode: de
+status: true
+dependencies: {  }
+name: 2140x970
+label: 2140x970
+effects:
+  99d02a76-5b25-4d69-8aca-2149009f201c:
+    uuid: 99d02a76-5b25-4d69-8aca-2149009f201c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2140
+      height: 970
+      anchor: center-center
+  bf01f972-fba4-4511-84d8-3497875eabe0:
+    uuid: bf01f972-fba4-4511-84d8-3497875eabe0
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

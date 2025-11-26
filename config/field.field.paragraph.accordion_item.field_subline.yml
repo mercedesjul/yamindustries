@@ -1,0 +1,22 @@
+uuid: 3d2d23e5-2914-42f9-9bad-7e4556a27574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subline
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - text
+id: paragraph.accordion_item.field_subline
+field_name: field_subline
+entity_type: paragraph
+bundle: accordion_item
+label: subline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

@@ -1,0 +1,13 @@
+uuid: 957ecd85-2192-46c1-a5db-f7a7f12d1da6
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.1000x1300
+  theme:
+    - yam
+id: vertical_teaser
+label: 'Vertical teaser'
+image_style_mappings: {  }
+breakpoint_group: yam
+fallback_image_style: 1000x1300

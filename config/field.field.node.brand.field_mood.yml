@@ -1,0 +1,58 @@
+uuid: f4cffc2c-c69a-40ce-b317-b2711c510aeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mood
+    - node.type.brand
+    - paragraphs.paragraphs_type.mood
+  module:
+    - entity_reference_revisions
+id: node.brand.field_mood
+field_name: field_mood
+entity_type: node
+bundle: brand
+label: Header
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      mood: mood
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 11
+        enabled: false
+      accordion_item:
+        weight: 12
+        enabled: false
+      cta:
+        weight: 13
+        enabled: false
+      datapoint:
+        weight: 14
+        enabled: false
+      domino_teaser:
+        weight: 15
+        enabled: false
+      fact_item:
+        weight: 16
+        enabled: false
+      facts:
+        weight: 17
+        enabled: false
+      mood:
+        weight: 2
+        enabled: true
+      product_view:
+        weight: 19
+        enabled: false
+      text_tile:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

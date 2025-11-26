@@ -1,0 +1,22 @@
+uuid: 61e4bf2a-d26b-4707-afac-c26e884fb38c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.domino_teaser
+id: paragraph.domino_teaser.status
+field_name: status
+entity_type: paragraph
+bundle: domino_teaser
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

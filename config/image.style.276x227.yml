@@ -1,0 +1,15 @@
+uuid: 286800c2-0d74-43b7-9b4d-885da2974d64
+langcode: de
+status: true
+dependencies: {  }
+name: 276x227
+label: 276x227
+effects:
+  4198ed5e-10ba-4527-8eb2-e8fc7f60edef:
+    uuid: 4198ed5e-10ba-4527-8eb2-e8fc7f60edef
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 276
+      height: 227
+      anchor: center-center

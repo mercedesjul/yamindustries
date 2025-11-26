@@ -1,0 +1,22 @@
+uuid: c48f9840-b8dd-46f9-a286-9525b1f78a23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_view.field_title
+    - paragraphs.paragraphs_type.product_view
+id: paragraph.product_view.default
+targetEntityType: paragraph
+bundle: product_view
+mode: default
+content:
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_brand: true

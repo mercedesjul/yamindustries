@@ -1,0 +1,29 @@
+uuid: e449bf2b-bbf8-4681-a280-40ed0a91d0cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_datapoint
+    - paragraphs.paragraphs_type.datapoint
+    - taxonomy.vocabulary.product_datapoints
+id: paragraph.datapoint.field_datapoint
+field_name: field_datapoint
+entity_type: paragraph
+bundle: datapoint
+label: datapoint
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      product_datapoints: product_datapoints
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

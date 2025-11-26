@@ -1,0 +1,23 @@
+uuid: dc90e8fc-94c3-4de9-9a55-6caaa4f84b05
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.760x440
+  theme:
+    - yam
+id: product
+label: Product
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: 760x440
+    breakpoint_id: yam.narrow
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: 760x440
+    breakpoint_id: yam.narrow
+    multiplier: 2x
+breakpoint_group: yam
+fallback_image_style: 760x440

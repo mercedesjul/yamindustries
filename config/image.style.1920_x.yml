@@ -1,0 +1,15 @@
+uuid: c3d54e80-44d8-4bd0-b292-c3a723beacfa
+langcode: de
+status: true
+dependencies: {  }
+name: 1920_x
+label: 1920x
+effects:
+  38c41407-dcdb-419c-b5f1-783359edb1f4:
+    uuid: 38c41407-dcdb-419c-b5f1-783359edb1f4
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: null
+      upscale: false

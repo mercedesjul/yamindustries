@@ -1,0 +1,15 @@
+uuid: 98a65eb9-77f1-4a4d-8659-23240bb6659d
+langcode: de
+status: true
+dependencies: {  }
+name: 1200x920
+label: 1200x920
+effects:
+  5ddb36ee-a9e6-4435-92ab-53c0fffafe79:
+    uuid: 5ddb36ee-a9e6-4435-92ab-53c0fffafe79
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 920
+      anchor: center-center

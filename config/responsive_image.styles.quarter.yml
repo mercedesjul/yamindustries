@@ -1,0 +1,24 @@
+uuid: 4b2bcccc-88b7-4b45-9aef-0ba81ec12994
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.250x325
+    - image.style.500x650
+  theme:
+    - yam
+id: quarter
+label: Quarter
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: 250x325
+    breakpoint_id: yam.all
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: 500x650
+    breakpoint_id: yam.all
+    multiplier: 2x
+breakpoint_group: yam
+fallback_image_style: 500x650

@@ -1,0 +1,31 @@
+uuid: 91059388-5dfd-41c2-9e48-90be21cd4b26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mood
+    - node.type.page
+    - paragraphs.paragraphs_type.mood
+  module:
+    - entity_reference_revisions
+id: node.page.field_mood
+field_name: field_mood
+entity_type: node
+bundle: page
+label: Header
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      mood: mood
+    negate: 0
+    target_bundles_drag_drop:
+      mood:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

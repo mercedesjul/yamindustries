@@ -1,0 +1,21 @@
+uuid: afbba964-9492-40d2-8a58-a9564f0c74a7
+langcode: de
+status: true
+dependencies: {  }
+name: 250x325
+label: 250x325
+effects:
+  c812dc9b-4f21-49b7-a10d-01d5afbff95b:
+    uuid: c812dc9b-4f21-49b7-a10d-01d5afbff95b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 325
+      anchor: center-center
+  a548c85b-92b5-4202-be82-f78d7f0a8ebe:
+    uuid: a548c85b-92b5-4202-be82-f78d7f0a8ebe
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

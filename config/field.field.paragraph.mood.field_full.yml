@@ -1,0 +1,21 @@
+uuid: afa96a0c-f3e8-41a0-a1df-3f2abf5234b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full
+    - paragraphs.paragraphs_type.mood
+id: paragraph.mood.field_full
+field_name: field_full
+entity_type: paragraph
+bundle: mood
+label: Full
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

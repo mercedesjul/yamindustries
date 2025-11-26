@@ -1,0 +1,43 @@
+uuid: a151b209-c415-4713-bb37-54f114a71867
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_facts
+    - paragraphs.paragraphs_type.fact_item
+    - paragraphs.paragraphs_type.facts
+  module:
+    - entity_reference_revisions
+id: paragraph.facts.field_facts
+field_name: field_facts
+entity_type: paragraph
+bundle: facts
+label: Facts
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      fact_item: fact_item
+    negate: 0
+    target_bundles_drag_drop:
+      cta:
+        weight: 6
+        enabled: false
+      domino_teaser:
+        weight: 7
+        enabled: false
+      fact_item:
+        weight: 9
+        enabled: true
+      facts:
+        weight: 8
+        enabled: false
+      mood:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: 4f9c1823-f6ec-4e40-b9e7-175786a019f3
+langcode: de
+status: true
+dependencies: {  }
+name: 1070x485
+label: 1070x485
+effects:
+  318d64e7-e129-4cef-b120-14eee625a33c:
+    uuid: 318d64e7-e129-4cef-b120-14eee625a33c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1070
+      height: 485
+      anchor: center-center
+  098ab018-4fc7-4690-ae7f-3bffd80d17f0:
+    uuid: 098ab018-4fc7-4690-ae7f-3bffd80d17f0
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

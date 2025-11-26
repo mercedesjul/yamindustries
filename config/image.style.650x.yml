@@ -1,0 +1,15 @@
+uuid: db32dc42-93ea-45ad-a208-3cbbbacacee0
+langcode: de
+status: true
+dependencies: {  }
+name: 650x
+label: 650x
+effects:
+  32ffbad3-d2e9-40bd-ba45-54ab58b6cf20:
+    uuid: 32ffbad3-d2e9-40bd-ba45-54ab58b6cf20
+    id: image_scale
+    weight: 1
+    data:
+      width: 650
+      height: null
+      upscale: false

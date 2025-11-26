@@ -1,0 +1,25 @@
+uuid: 5b33e1c4-f949-4eb2-96c7-8722a884d536
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - yam
+id: yam_mainnavigation
+theme: yam
+region: header_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

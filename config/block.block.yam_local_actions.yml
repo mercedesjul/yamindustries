@@ -1,0 +1,20 @@
+uuid: f0d62b5a-1506-4b43-81ac-4542cb6632f3
+langcode: en
+status: false
+dependencies:
+  theme:
+    - yam
+_core:
+  default_config_hash: af16QDNpvsbmvknM6aF4_PKRNh6811d_12YpdesjIpk
+id: yam_local_actions
+theme: yam
+region: header_left
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

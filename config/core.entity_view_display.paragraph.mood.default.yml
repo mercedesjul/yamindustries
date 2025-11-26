@@ -1,0 +1,57 @@
+uuid: 6fc96238-b507-45b1-9966-36798243cdb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mood.field_button
+    - field.field.paragraph.mood.field_full
+    - field.field.paragraph.mood.field_image
+    - field.field.paragraph.mood.field_title
+    - paragraphs.paragraphs_type.mood
+  module:
+    - link
+id: paragraph.mood.default
+targetEntityType: paragraph
+bundle: mood
+mode: default
+content:
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_full:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

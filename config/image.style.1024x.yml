@@ -1,0 +1,15 @@
+uuid: a1b105c2-b9ac-451a-837b-15559e2fa826
+langcode: de
+status: true
+dependencies: {  }
+name: 1024x
+label: 1024x
+effects:
+  3addc332-3d8f-4de2-9e27-3c36be3dccdc:
+    uuid: 3addc332-3d8f-4de2-9e27-3c36be3dccdc
+    id: image_scale
+    weight: 1
+    data:
+      width: 1024
+      height: null
+      upscale: false

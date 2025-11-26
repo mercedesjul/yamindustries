@@ -1,0 +1,15 @@
+uuid: 8bc74b35-8351-427a-ba99-996ebfbc9ad5
+langcode: de
+status: true
+dependencies: {  }
+name: 80_x_66
+label: 80x66
+effects:
+  06fd3268-d747-402e-99cd-34967fb72727:
+    uuid: 06fd3268-d747-402e-99cd-34967fb72727
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 80
+      height: 66
+      anchor: center-center

@@ -1,0 +1,25 @@
+uuid: 14d80132-8d8a-4b29-96f2-80ed1dd6eac5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1182931d-6c34-4add-978e-6fb5ccefa002'
+  module:
+    - block_content
+  theme:
+    - yam
+id: yam_footer1
+theme: yam
+region: footer_outer_left
+weight: 0
+provider: null
+plugin: 'block_content:1182931d-6c34-4add-978e-6fb5ccefa002'
+settings:
+  id: 'block_content:1182931d-6c34-4add-978e-6fb5ccefa002'
+  label: 'Footer 1'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 1df12587-9162-4a74-a23a-eca73bbd96b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reversed
+    - paragraphs.paragraphs_type.domino_teaser
+id: paragraph.domino_teaser.field_reversed
+field_name: field_reversed
+entity_type: paragraph
+bundle: domino_teaser
+label: reversed
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

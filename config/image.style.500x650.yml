@@ -1,0 +1,21 @@
+uuid: 61bbdac4-031b-489d-9d79-8721b96fc39b
+langcode: de
+status: true
+dependencies: {  }
+name: 500x650
+label: 500x650
+effects:
+  c7bc9b44-f247-4634-afdd-d1e84a50dbff:
+    uuid: c7bc9b44-f247-4634-afdd-d1e84a50dbff
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 650
+      anchor: center-center
+  cb7d3fb5-a6be-4b8d-89ea-0ea3c7a3303b:
+    uuid: cb7d3fb5-a6be-4b8d-89ea-0ea3c7a3303b
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

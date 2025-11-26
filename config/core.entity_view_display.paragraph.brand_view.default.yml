@@ -1,0 +1,22 @@
+uuid: c48f9840-b8dd-46f9-a286-9525b1f78a24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.brand_view.field_grid_size
+    - paragraphs.paragraphs_type.brand_view
+  module:
+    - options
+id: paragraph.brand_view.default
+targetEntityType: paragraph
+bundle: brand_view
+mode: default
+content:
+  field_grid_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

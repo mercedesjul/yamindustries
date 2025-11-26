@@ -1,0 +1,18 @@
+uuid: 6c81e70e-7cd5-42d9-9086-214f009b3ad4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.mood
+id: paragraph.mood.created
+field_name: created
+entity_type: paragraph
+bundle: mood
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,21 @@
+uuid: b56429bb-5872-4bdf-8e2d-0bd266fe98f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reversed
+    - paragraphs.paragraphs_type.cta
+id: paragraph.cta.field_reversed
+field_name: field_reversed
+entity_type: paragraph
+bundle: cta
+label: reversed
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,30 @@
+uuid: a81e5f26-c36b-496b-8abb-3c67443209a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.datapoint.field_datapoint
+    - field.field.paragraph.datapoint.field_value
+    - paragraphs.paragraphs_type.datapoint
+id: paragraph.datapoint.default
+targetEntityType: paragraph
+bundle: datapoint
+mode: default
+content:
+  field_datapoint:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_value:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

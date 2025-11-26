@@ -1,0 +1,21 @@
+uuid: 805346d8-d77e-4e5c-bca2-5cd5903ac094
+langcode: de
+status: true
+dependencies: {  }
+name: 1230x920
+label: 1230x920
+effects:
+  b268b772-dcbf-4e1e-8db0-36b8eb1aa281:
+    uuid: b268b772-dcbf-4e1e-8db0-36b8eb1aa281
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1230
+      height: 920
+      anchor: center-center
+  b6838f40-fa9d-46d1-8dc3-2e8c2d54b3b1:
+    uuid: b6838f40-fa9d-46d1-8dc3-2e8c2d54b3b1
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

@@ -1,0 +1,15 @@
+uuid: b98dba8a-cf86-4e50-9c73-8d3862affda4
+langcode: de
+status: true
+dependencies: {  }
+name: 610x355
+label: 610x355
+effects:
+  8d63a883-8f2c-4776-abed-2c10b36f098f:
+    uuid: 8d63a883-8f2c-4776-abed-2c10b36f098f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 610
+      height: 355
+      anchor: center-center

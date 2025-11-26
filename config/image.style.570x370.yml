@@ -1,0 +1,15 @@
+uuid: be7517f9-95c1-47bf-826d-1ab5f3c61aff
+langcode: de
+status: true
+dependencies: {  }
+name: 570x370
+label: 2080×1480
+effects:
+  a0bb69da-edac-440b-b71c-9a1bbb51320d:
+    uuid: a0bb69da-edac-440b-b71c-9a1bbb51320d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2080
+      height: 1480
+      anchor: center-center

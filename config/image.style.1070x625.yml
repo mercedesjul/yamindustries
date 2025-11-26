@@ -1,0 +1,15 @@
+uuid: 42b26b35-f378-4b14-b030-ba47b83e0582
+langcode: de
+status: true
+dependencies: {  }
+name: 1070x625
+label: 1070x625
+effects:
+  6406854d-ee15-4c59-9c9e-d2f47fde619d:
+    uuid: 6406854d-ee15-4c59-9c9e-d2f47fde619d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1070
+      height: 625
+      anchor: center-center

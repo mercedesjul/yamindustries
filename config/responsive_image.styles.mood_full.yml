@@ -1,0 +1,30 @@
+uuid: 62f04646-2c02-4588-b30c-e2c18dc4299a
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.1070x625
+    - image.style.610x355
+    - image.style.985x570
+  theme:
+    - yam
+id: mood_full
+label: 'Mood full'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: 1070x625
+    breakpoint_id: yam.wide
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: 985x570
+    breakpoint_id: yam.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: 610x355
+    breakpoint_id: yam.narrow
+    multiplier: 1x
+breakpoint_group: yam
+fallback_image_style: 610x355

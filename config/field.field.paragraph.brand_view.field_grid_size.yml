@@ -1,0 +1,23 @@
+uuid: e7a4a641-2ecc-41be-8173-65bea92de143
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid_size
+    - paragraphs.paragraphs_type.brand_view
+  module:
+    - options
+id: paragraph.brand_view.field_grid_size
+field_name: field_grid_size
+entity_type: paragraph
+bundle: brand_view
+label: grid_size
+description: 'How many items should be shown in one row the grid on wide screens'
+required: false
+translatable: false
+default_value:
+  -
+    value: four
+default_value_callback: ''
+settings: {  }
+field_type: list_string

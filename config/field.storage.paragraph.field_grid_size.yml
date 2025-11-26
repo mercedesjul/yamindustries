@@ -1,0 +1,33 @@
+uuid: 6b7883e8-728b-46ba-9d94-daf2f859ebbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_grid_size
+field_name: field_grid_size
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: two
+      label: two
+    -
+      value: three
+      label: three
+    -
+      value: four
+      label: four
+    -
+      value: five
+      label: five
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

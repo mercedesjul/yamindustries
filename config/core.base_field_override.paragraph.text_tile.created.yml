@@ -1,0 +1,18 @@
+uuid: c407aa84-e3e7-4e08-9a6c-0ecf4288beb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.text_tile
+id: paragraph.text_tile.created
+field_name: created
+entity_type: paragraph
+bundle: text_tile
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

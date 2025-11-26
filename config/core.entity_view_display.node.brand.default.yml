@@ -1,0 +1,59 @@
+uuid: 35238ef7-8eb4-434d-b75c-6ddc7af2440b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.brand.field_description
+    - field.field.node.brand.field_mood
+    - field.field.node.brand.field_paragraphs
+    - node.type.brand
+  module:
+    - entity_reference_revisions
+    - layout_paragraphs
+    - text
+    - user
+id: node.brand.default
+targetEntityType: node
+bundle: brand
+mode: default
+content:
+  field_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_mood:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_paragraphs:
+    type: layout_paragraphs
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

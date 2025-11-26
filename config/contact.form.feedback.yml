@@ -1,0 +1,14 @@
+uuid: 125640a4-611d-4c7b-917a-3c32c77879f9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - webmaster@yamindustries.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

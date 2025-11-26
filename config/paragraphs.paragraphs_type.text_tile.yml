@@ -1,0 +1,10 @@
+uuid: c2424cc6-8aa7-4f9b-bf5e-39934d871d24
+langcode: en
+status: true
+dependencies: {  }
+id: text_tile
+label: 'Text tile'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

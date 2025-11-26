@@ -1,0 +1,25 @@
+uuid: f436ad0d-2c6b-4015-bcfc-50ded2fbc74f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a44915d7-c1bb-4f38-bd53-45dc4c241f5e'
+  module:
+    - block_content
+  theme:
+    - yam
+id: yam_footer3
+theme: yam
+region: footer_inner_right
+weight: 0
+provider: null
+plugin: 'block_content:a44915d7-c1bb-4f38-bd53-45dc4c241f5e'
+settings:
+  id: 'block_content:a44915d7-c1bb-4f38-bd53-45dc4c241f5e'
+  label: 'Footer 3'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

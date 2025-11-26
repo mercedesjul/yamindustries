@@ -1,0 +1,13 @@
+uuid: bfc56b06-21df-430e-a2b0-e71e9decf931
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.x872
+  theme:
+    - yam
+id: image_show
+label: 'Image Show'
+image_style_mappings: {  }
+breakpoint_group: yam
+fallback_image_style: x872

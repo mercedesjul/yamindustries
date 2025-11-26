@@ -1,0 +1,15 @@
+uuid: e1ccd725-8ff2-4b7d-abe7-9585a7439c3b
+langcode: de
+status: true
+dependencies: {  }
+name: x650
+label: x650
+effects:
+  a50257c5-b950-4805-a354-aa1a2fa9a46c:
+    uuid: a50257c5-b950-4805-a354-aa1a2fa9a46c
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 650
+      upscale: true

@@ -1,0 +1,30 @@
+uuid: 06a954a4-f3a6-4e1b-b273-972c9a76d838
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.datapoint.field_datapoint
+    - field.field.paragraph.datapoint.field_value
+    - paragraphs.paragraphs_type.datapoint
+id: paragraph.datapoint.default
+targetEntityType: paragraph
+bundle: datapoint
+mode: default
+content:
+  field_datapoint:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_value:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

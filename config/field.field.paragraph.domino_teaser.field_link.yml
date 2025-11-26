@@ -1,0 +1,23 @@
+uuid: bdcecc4f-2db3-4b1b-9169-fd66e8d88ed5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.domino_teaser
+  module:
+    - link
+id: paragraph.domino_teaser.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: domino_teaser
+label: link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

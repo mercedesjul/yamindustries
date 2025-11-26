@@ -1,0 +1,15 @@
+uuid: da99f049-e7bc-416a-be62-c79fb10f2bd1
+langcode: de
+status: true
+dependencies: {  }
+name: big_thumbnail
+label: 'Big thumbnail'
+effects:
+  13057d10-fa6b-452c-af16-7285c61cd04f:
+    uuid: 13057d10-fa6b-452c-af16-7285c61cd04f
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: 250
+      upscale: false

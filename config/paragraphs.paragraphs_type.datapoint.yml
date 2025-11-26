@@ -1,0 +1,10 @@
+uuid: 377bb722-0491-419e-8a2f-47770ddef7a7
+langcode: en
+status: true
+dependencies: {  }
+id: datapoint
+label: datapoint
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

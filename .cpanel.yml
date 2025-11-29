@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/yamindus/test.yamindustries.ma/
+    - /bin/cp -R . $DEPLOYPATH

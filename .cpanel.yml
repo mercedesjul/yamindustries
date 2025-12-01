@@ -1,4 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/yamindus/test.yamindustries.ma/
-    - /bin/cp -R . $DEPLOYPATH
+    - /usr/local/bin/php /home/yamindus/test.yamindustries.ma/vendor/bin/drush.php cim -y 2>&1 > /home/yamindus/test.yamindustries.ma/drush_log.txt

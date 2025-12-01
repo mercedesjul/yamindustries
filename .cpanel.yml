@@ -1,5 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/yamindus/test.yamindustries.ma/
-#    - /bin/cp -R . $DEPLOYPATH
-    - /home/yamindus/test.yamindustries.ma/composer.phar install > /home/yamindus/test.yamindustries.ma/c_log.txt
+    - /bin/cp -R . $DEPLOYPATH

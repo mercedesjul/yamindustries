@@ -6,7 +6,7 @@
   gap: 1.5rem;
 }
 .social-link {
-  color: var(--accent); /* Gray 400 */
+  color: var(--accent);
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-flex;

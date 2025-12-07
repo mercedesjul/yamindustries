@@ -60,10 +60,13 @@ final class SocialBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build(): array {
-    $build['content'] = [
-      '#markup' => $this->t('It works!'),
+    return [
+      '#theme'=> 'socials',
+      '#facebook' => $this->configuration['facebook'],
+      '#instagram' => $this->configuration['instagram'],
+      '#x' => $this->configuration['x'],
+      '#linkedin' => $this->configuration['linkedin'],
     ];
-    return $build;
   }
 
 }
